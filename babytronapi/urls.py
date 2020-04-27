@@ -24,10 +24,12 @@ from rest_framework_jwt.views import (
 
 from parent.views import ParentViewSet
 from baby.views import BabyViewSet
+from event.views import EventViewSet
 router = routers.DefaultRouter()
 
 router.register(r'parent', ParentViewSet)
 router.register(r'baby', BabyViewSet)
+router.register(r'event', EventViewSet)
 
 
 urlpatterns = [

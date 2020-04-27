@@ -14,7 +14,7 @@ from event.serializers import EventSerializer
 from guardian.shortcuts import assign_perm
 from permissions.services import APIPermissionClassFactory
 
-def evaluate_user(user, obj, request):
+def evaluate_user_permission(user, obj, request):
     return user.username == obj.parent.username
 
 class BabyViewSet(viewsets.ModelViewSet):
@@ -29,11 +29,11 @@ class BabyViewSet(viewsets.ModelViewSet):
                     'list': True,
                 },
                 'instance': {
-                    'retrieve': evaluate_user,
-                    'destroy': evaluate_user,
-                    'update': evaluate_user,
-                    'partial_update': evaluate_user,
-                    'events': evaluate_user
+                    'retrieve': evaluate_user_permission,
+                    'destroy': evaluate_user_permission,
+                    'update': evaluate_user_permission,
+                    'partial_update': evaluate_user_permission,
+                    'events': evaluate_user_permission
                 }
             }
         ),

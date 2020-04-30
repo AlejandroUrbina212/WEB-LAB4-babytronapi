@@ -17,7 +17,7 @@ Activate the virtual enviroment
 > myvenv\Scripts\activate.bat
 ```
 
-Istall all dependencies for the project
+Install all dependencies for the project
 
 ```bash
 pip install -r requirements.txt
@@ -37,9 +37,7 @@ Heres a guide to all the data thats already in the database, you might find this
 *  Parent Jorge (id: 3, username: jorge, password: jorge1357)
    * Baby Lisa Perez (id: 8)
    
-        * Event : 
-          id: 8
-          type: POOP
+        * Event (id:8, type: POOP)
           
  
 *  Parent Adrian (id: 4,  username: adrian, password: adrian1357)
